@@ -1,0 +1,19 @@
+# Spring settings
+spring:
+    profiles.active: dev
+
+    kafka:
+        bootstrap-servers: 127.0.0.1:9092,127.0.0.1:9092,127.0.0.1:9092
+        consumer:
+            group-id: CID_huaweikafka
+            key-serializer: org.apache.kafka.common.serialization.StringSerializer
+            value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+        producer:
+            key-serializer: org.apache.kafka.common.serialization.StringSerializer
+            value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+
+kafkaMQ:
+    data_number: ${DATA_NUMBER}
+    thread_number: ${THREAD_NUMBER}

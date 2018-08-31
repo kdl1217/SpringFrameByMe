@@ -1,0 +1,14 @@
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.5.+")
+    compile("commons-codec:commons-codec:1.+")
+    compile("commons-logging:commons-logging:1.+")
+    compile("org.apache.httpcomponents:httpclient:4.5.+")
+    compile("com.alibaba:fastjson:1.2.+")
+    compile("joda-time:joda-time:2.+")
+    compile("com.aliyun.openservices:ons-client:1.7.+")
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

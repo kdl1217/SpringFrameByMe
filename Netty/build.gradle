@@ -1,0 +1,10 @@
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.5.+")
+
+    compile("io.netty:netty-all:4.1.2.Final")
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

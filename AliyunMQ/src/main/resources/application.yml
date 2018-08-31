@@ -1,0 +1,28 @@
+# Spring settings
+spring:
+    profiles.active: dev
+
+messageMQ:
+    data_number: ${DATA_NUMBER}
+    thread_number: ${THREAD_NUMBER}
+    operation: ${OPERATION}
+
+aliyun_mq:
+    accesskey: LTAIijpFdbb49XqP
+    secretkey: a9wtrx6Ah2gJ4LU92NKz56W73S3aXd
+    onsaddr: ${ONSADDR}
+    #公网测试: http://onsaddr-internet.aliyun.com/rocketmq/nsaddr4client-internet
+    #公有云生产: http://onsaddr-internal.aliyun.com:8080/rocketmq/nsaddr4client-internal
+    #杭州金融云: http://jbponsaddr-internal.aliyun.com:8080/rocketmq/nsaddr4client-internal
+    #深圳金融云: http://mq4finance-sz.addr.aliyun.com:8080/rocketmq/nsaddr4client-internal
+    producer:
+        producerid: PID_GMMC
+        topic: GMMC_MQ
+        tags: gmmc-tbox
+    consumer:
+        consumerid: CID_GMMC
+        topics:
+            - GMMC_MQ
+        tags:
+            - gmmc-tbox
+
